@@ -1,0 +1,98 @@
+<div class="regdiv">
+  <form #signup="ngForm" class="example-form">
+    <!-- (ngSubmit)="onSubmit(signup.value)" -->
+    <h1 style="color: brown; text-align: center">REGISTER</h1>
+    <mat-divider style="background-color: brown"></mat-divider>
+    <mat-form-field appearance="outline" class="matFormField">
+      <mat-label>Name</mat-label>
+      <input matInput name="name" ngModel required #name="ngModel" />
+    </mat-form-field>
+    <span *ngIf="name.invalid && name.touched" class="validation matFormField"
+      >Name is required</span
+    >
+    <mat-form-field appearance="outline" class="matFormField">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        name="email"
+        type="email"
+        #email="ngModel"
+        ngModel
+        required
+      />
+    </mat-form-field>
+    <div *ngIf="email.errors">
+      <span
+        *ngIf="email.invalid && email.touched"
+        class="validation matFormField"
+        >Email address is required</span
+      >
+    </div>
+
+    <mat-form-field appearance="outline" class="matFormField">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        name="password"
+        ngModel
+        required
+        #password="ngModel"
+      />
+    </mat-form-field>
+    <span
+      *ngIf="password.invalid && password.touched"
+      class="validation matFormField"
+      >Password is required</span
+    >
+
+    <!-- <mat-form-field appearance="outline" class="matFormField">
+      <mat-label>Contact No</mat-label>
+      <input matInput name="contactno" ngModel />
+    </mat-form-field> -->
+
+    <!-- <mat-form-field appearance="outline" class="matFormField">
+      <mat-label>Confirm Password</mat-label>
+      <input matInput type="password" name="confirmpassword" ngModel />
+    </mat-form-field>
+
+    <div class="matFormField">
+      <mat-label style="color: gray">Gender :</mat-label>
+      <mat-radio-group>
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+        <mat-radio-button value="other">Other</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <mat-form-field appearance="outline" class="matFormField">
+      <mat-label>Select State</mat-label>
+      <mat-select name="state" ngModel>
+        <mat-option value="Gujarat">Gujarat</mat-option>
+        <mat-option value="Maharashtra">Maharashtra</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="matFormField" appearance="outline">
+      <mat-label>BirthDate</mat-label>
+
+      <input
+        matInput
+        [matDatepicker]="picker"
+        placeholder="BirthDate"
+        name="dob"
+        ngModel
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field> -->
+
+    <button
+      mat-raised-button
+      class="matFormField regbtn"
+      (click)="onSubmit(signup.value)"
+    >
+      R&nbsp;E&nbsp;G&nbsp;I&nbsp;S&nbsp;T&nbsp;E&nbsp;R
+    </button>
+  </form>
+</div>

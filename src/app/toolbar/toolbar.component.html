@@ -1,0 +1,83 @@
+<mat-toolbar style="background-color: brown">
+  <!-- <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+    style="color: white"
+  >
+    <mat-icon>menu</mat-icon>
+  </button> -->
+  <img
+    src="./../../assets/logo-removebg-preview.png"
+    alt="weblogo"
+    height="50px"
+    width="50px"
+    matTooltip="SS_WEB"
+  />
+  <span style="margin: 5px; color: greenyellow">SS_WEB</span>
+  <!-- <button mat-raised-button style="background-color: green; margin: 10px">
+      Home
+    </button>
+
+    <button mat-raised-button color="accent">Accent</button>
+    <span class="example-spacer"></span> -->
+  <!-- <span class="example-spacer"></span> -->
+  <a class="links" routerLink="" matTooltip="HOME">HOME</a>
+  <a class="links" routerLink="about" matTooltip="ABOUT US">ABOUT US </a>
+  <a class="links" routerLink="contactus" matTooltip="CONTACT US">CONTACT US</a>
+  <a class="links" routerLink="career" matTooltip="CAREER">CAREER</a>
+  <div class="auth">
+    <button
+      class="buttonauth"
+      mat-raised-button
+      routerLink="login"
+      matTooltip="login here"
+    >
+      Login
+    </button>
+
+    <button
+      class="buttonauth"
+      mat-raised-button
+      routerLink="register"
+      matTooltip="Register here"
+    >
+      Register
+    </button>
+    <div ngbDropdown class="d-inline-block">
+      <button
+        class="btn btn-outline-primary"
+        style="margin: 5px"
+        id="dropdownBasic1"
+        ngbDropdownToggle
+        style="
+          margin-left: 5px;
+          margin-top: 1px;
+          height: 37px;
+          color: brown;
+          background-color: white;
+        "
+      >
+        <mat-icon aria-hidden="false" aria-label=" perm_identity "
+          >perm_identity</mat-icon
+        >
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem>
+          <fa-icon [icon]="user" style="color: brown; margin: 10px"></fa-icon
+          >Profile
+        </button>
+        <mat-divider></mat-divider>
+        <button ngbDropdownItem>
+          <fa-icon [icon]="setting" style="color: brown; margin: 10px"></fa-icon
+          >Settings
+        </button>
+        <mat-divider></mat-divider>
+        <button ngbDropdownItem>
+          <fa-icon [icon]="logout" style="color: brown; margin: 10px"></fa-icon
+          >Logout
+        </button>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>

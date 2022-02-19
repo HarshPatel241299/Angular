@@ -1,0 +1,23 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.links {
+  margin: 0.4%;
+  color: white;
+  text-decoration: none;
+}
+.usericon {
+  justify-content: flex-end;
+}
+.auth {
+  /* margin-left: 1000px; */
+  margin-left: 50%;
+}
+.buttonauth {
+  color: brown;
+  background-color: white;
+  text-align: center;
+  margin: 5px;
+  text-align: center;
+}

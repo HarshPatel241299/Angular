@@ -1,0 +1,78 @@
+<!-- <form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Email</mat-label>
+    <input required type="email" placeholder="Ex. pat@example.com" />
+    <mat-label>Password</mat-label>
+    <input required type="password" placeholder="password" />
+  </mat-form-field>
+</form> -->
+<div class="logindiv">
+  <form class="example-form" #form="ngForm">
+    <img
+      src="./../../assets/logo-removebg-preview.png"
+      alt="logo"
+      class="avatar"
+    />
+    <mat-divider style="background-color: brown"></mat-divider>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>
+        <fa-icon [icon]="user" style="margin: 3px"></fa-icon>EMAIL</mat-label
+      >
+      <input
+        matInput
+        type="email"
+        ngModel
+        #email="ngModel"
+        name="email"
+        email
+        required
+      />
+    </mat-form-field>
+    <div *ngIf="email.errors">
+      <span
+        *ngIf="email.invalid && email.touched"
+        class="validation example-full-width"
+        >Email address is required</span
+      >
+    </div>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label
+        ><fa-icon [icon]="lock" style="margin: 3px"></fa-icon
+        >PASSWORD</mat-label
+      >
+
+      <input
+        ngModel
+        #password="ngModel"
+        matInput
+        type="password"
+        name="password"
+        class="input"
+        required
+      />
+    </mat-form-field>
+    <span
+      *ngIf="password.invalid && password.touched"
+      class="validation example-full-width"
+      >Password is required</span
+    >
+    <div style="justify-content: center; display: flex">
+      <button
+        mat-flat-button
+        class="loginbtn"
+        [disabled]="form.invalid"
+        (click)="updatedata(form.value)"
+      >
+        L&nbsp;&nbsp;O&nbsp;&nbsp;G&nbsp;&nbsp;I&nbsp;&nbsp;N
+      </button>
+    </div>
+    <h1 style="color: brown; text-align: center" *ngIf="message == 'success'">
+      {{ message }}
+    </h1>
+    <h1 style="color: red; text-align: center" *ngIf="message != 'success'">
+      {{ message | titlecase }}
+    </h1>
+  </form>
+</div>
