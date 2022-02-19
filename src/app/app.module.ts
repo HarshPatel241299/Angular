@@ -32,6 +32,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { VideomanageComponent } from './videomanage/videomanage.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     CareerComponent,
     LoginComponent,
     RegisterComponent,
+    VideomanageComponent,
   ],
   imports: [
     BrowserModule,
